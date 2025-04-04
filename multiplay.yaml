@@ -7,7 +7,7 @@
 
    - name: play1 task2
      ansible.builtin.debug:
-     msg: "This is play1 and task2"
+      msg: "This is play1 and task2"
 
 - name: multiplay
   hosts: web
