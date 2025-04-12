@@ -1,0 +1,17 @@
+- name: variables in  a task
+  hosts: localhost
+  vars:
+   name: bhanu prakash
+   course: cse
+   college: srm university
+  tasks:
+  - name: using varibales in a task
+    vars:
+     course: ms in cs
+     collge: UFL
+    ansible.builtin.debug:
+     msg: "Hi this {{name}} pursuing {{course}} degree from {{college}}"
+  - name: varibales in a task
+    ansible.builtin.debug:
+     msg: "Hi this {{name}} pursuing {{course}} degree from {{college}}"
+  
