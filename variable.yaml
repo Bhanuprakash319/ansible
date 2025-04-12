@@ -1,0 +1,10 @@
+- name: practicing with variables
+  hosts: web
+  vars:
+   name: bhanu prakash
+   age: 21
+  tasks: 
+  - name: printing variables
+    ansible.builtin.debug:
+     msg: "Hi this {{name}}, {{age}} years old"
+  
