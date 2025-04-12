@@ -1,6 +1,6 @@
 - name: declaring variables in inventory
   hosts: localhost
-  task:
-  - nam: printing variables
+  tasks:
+  - names: printing variables
     ansible.builtin.debug:
      msg: "This is {{name}}, form {{place}}"
