@@ -1,5 +1,5 @@
 - name: practicing with variables
-  hosts: web
+  hosts: localhost
   vars:
    name: bhanu prakash
    age: 21
