@@ -14,6 +14,6 @@
     vars:
      greet: A very good morning
     ansible.builtin.debug:
-     msg: "Hi, {{greet | lower}}"
-    ansible.builtin.debug:
      msg: "Hi, {{greet | upper}}"
+    ansible.builtin.debug:
+     msg: "Hi, {{greet | lower}}"
