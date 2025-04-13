@@ -4,7 +4,10 @@
   - name: loops
     ansible.builtin.debug:
      msg: "Hi {{item}}"
-    loop:
-    - bhanu
-    - sai
-    - charan
+    loop: ["bhanu", "sai", "charan"]
+    # - bhanu
+    # - sai
+    # - charan
+
+#- name: install packages by using loops
+  
