@@ -7,13 +7,15 @@
     ansible.builtin.debug:
      msg: "Hi my name is {{name | default('Bhanu')}} and i am {{age}} years old"
   
-- name: using lower and upperfilter
+- name: using lower and upper filter
   hosts: localhost
   tasks:
-  - name: lowercase and uppercase string
+  - name: uppercase string
     vars:
      greet: A very good morning
     ansible.builtin.debug:
      msg: "Hi, {{greet | upper}}"
+ 
+  - name: lowercase string
     ansible.builtin.debug:
      msg: "Hi, {{greet | lower}}"
