@@ -5,4 +5,4 @@
     vars:
      age: 21
     ansible.builtin.debug:
-     msg: "Hi my name is {{name}} and i am {{age}} years old"
+     msg: "Hi my name is {{name | default('Bhanu')}} and i am {{age}} years old"
