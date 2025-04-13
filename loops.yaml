@@ -14,8 +14,8 @@
   become: yes
   tasks:
   - name: install software
-    ansible.buitin.dnf:
-     name: "{{item}}"
+    ansible.builtin.dnf:
+     name: {{item}}
      state: present
     loop: ["mysql", "nginx", "postfix"]
   
