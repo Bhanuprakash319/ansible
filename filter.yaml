@@ -9,10 +9,10 @@
   
 - name: using lower and upper filter
   hosts: localhost
+  vars:
+     greet: A very good morning
   tasks:
   - name: uppercase string
-    vars:
-     greet: A very good morning
     ansible.builtin.debug:
      msg: "Hi, {{greet | upper}}"
  
