@@ -1,19 +1,17 @@
-- name: Creating a id user with the help of conditions
-  hosts: web
-  become: yes
+- name: checking a number
+  hosts: localhost
+  vars_prompt:
+  - name: number
+    prompt: enter the number
+    private: false
   tasks:
-  - name: check user exists or not
-    ansible.builtin.command: id expense
-    ignore_errors: true
-    register: user
-
-  - name: output of the verification of user
+  - name: Number is less than 10
     ansible.builtin.debug:
-     msg: "{{user}}"
-
-  - name: create user
-    ansible.builtin.command: useradd expense
-    when: user.rc != 0
-
-  - name: check user exists or not
-    ansible.builtin.command: id expense
+     msg: "Given {{number}} is less than 10"
+    when: number < 10
+  
+  - name: Number is greater than or equal to 10
+    ansible.builtin.debug:
+     msg: "Given {{number}} is greater than or equal to 10"
+    when: number >= 10
+  
