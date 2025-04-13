@@ -10,3 +10,10 @@
   - name: output of the verification of user
     ansible.builtin.debug:
      msg: "{{user}}"
+
+  - name: create user
+    ansible.builtin.commad: useradd expense
+    when: user.rc != 0
+
+  - name: check user exists or not
+    ansible.builtin.command: id expense
