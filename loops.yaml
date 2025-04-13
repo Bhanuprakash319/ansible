@@ -1,23 +1,23 @@
-# - name: demo on loops
-#   hosts: localhost
-#   tasks:
-#   - name: loops
-#     ansible.builtin.debug:
-#      msg: "Hi {{item}}"
-#     loop: ["bhanu", "sai", "charan"]
+- name: demo on loops
+  hosts: localhost
+  tasks:
+   - name: loops
+     ansible.builtin.debug:
+      msg: "Hi {{item}}"
+     loop: ["bhanu", "sai", "charan"]
     # - bhanu
     # - sai
     # - charan
 
-# - name: install packages by using loops
-#   hosts: web
-#   become: yes
-#   tasks:
-#   - name: install software
-#     ansible.builtin.dnf:
-#      name: "{{item}}"
-#      state: present
-#     loop: ["mysql", "nginx", "postfix"]
+- name: install packages by using loops
+  hosts: web
+  become: yes
+  tasks:
+   - name: install software
+     ansible.builtin.dnf:
+      name: "{{item}}"
+      state: present
+     loop: ["mysql", "nginx", "postfix"]
 
 - name: install packages by using loops
   hosts: web
