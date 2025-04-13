@@ -6,3 +6,13 @@
      age: 21
     ansible.builtin.debug:
      msg: "Hi my name is {{name | default('Bhanu')}} and i am {{age}} years old"
+  
+- name: using lower and upperfilter
+  hosts: localhost
+  tasks:
+  - name: lowercase and uppercase string
+    vars:
+     greet: A very good morning
+    ansible.builtin.debug:
+     msg: "Hi, {{greet | lower}}"
+     msg: "Hi, {{greet | upper}}"
