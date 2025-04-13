@@ -1,0 +1,6 @@
+- name: Creating a id user with the help of conditions
+  hosts: web
+  become: yes
+  tasks:
+  - name: check user exists or not
+    ansible.builtin.command: id expense
