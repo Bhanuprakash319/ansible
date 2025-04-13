@@ -1,0 +1,8 @@
+- name: using default filter
+  hosts: localhost
+  tasks:
+  - name: default value
+    vars:
+     age: 21
+    ansible.builtin.debug:
+     msg: "Hi my name is {{name}} and i am {{age}} years old"
