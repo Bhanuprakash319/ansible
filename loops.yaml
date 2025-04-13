@@ -15,7 +15,7 @@
   tasks:
   - name: install software
     ansible.buitin.dnf:
-     name: {{item}}
+     name: "{{item}}"
      state: present
     loop: ["mysql", "nginx", "postfix"]
   
