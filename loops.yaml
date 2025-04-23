@@ -10,7 +10,7 @@
     # - charan
 
 - name: install packages by using loops
-  hosts: web
+  hosts: localhost
   become: yes
   tasks:
    - name: install software
