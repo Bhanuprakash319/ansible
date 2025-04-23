@@ -17,20 +17,20 @@
      ansible.builtin.dnf:
       name: "{{item}}"
       state: present
-     loop: ["mysql", "nginx", "postfix"]
+     loop: ["nodejs", "nginx", "postfix"]
 
-- name: install packages by using loops
-  hosts: web
-  become: yes
-  tasks:
-  - name: install software
-    ansible.builtin.dnf:
-     name: "{{item.name}}"
-     state: "{{item.state}}"
-    loop: 
-    - {name: mysql, state: absent}
-    - {name: nginx, state: present}
-    - {name: postfix, state: absent}
+# - name: install packages by using loops
+#   hosts: web
+#   become: yes
+#   tasks:
+#   - name: install software
+#     ansible.builtin.dnf:
+#      name: "{{item.name}}"
+#      state: "{{item.state}}"
+#     loop: 
+#     - {name: mysql, state: absent}
+#     - {name: nginx, state: present}
+#     - {name: postfix, state: absent}
 
 
   
